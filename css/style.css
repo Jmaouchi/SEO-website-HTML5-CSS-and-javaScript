@@ -23,12 +23,19 @@
   font-weight: 500;
 }
 
+
 html{
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 8rem ;
 }
+
+body.active{
+  background-color: black;
+  color: white; 
+} 
+
 
 ::-webkit-scrollbar{
   width: 1rem;
@@ -146,7 +153,7 @@ h2::before{
   justify-content: center;
 } */
 
-span{
+/* span{
   display: block;
   padding-left: 10px;
   color:white;
@@ -156,7 +163,7 @@ span{
 .words{
   overflow:hidden;
   color: red;
-}
+} */
 
 @keyframes spin_words{
   10%{
@@ -201,7 +208,12 @@ span{
     gap:2rem;
     padding-bottom: 30px;
     padding-top: 30px;
+    border-bottom: black solid 1px;
 
+  }
+
+  .box .active{
+    border-bottom: 1px solid white;
   }
     .box :nth-child(2){
       flex-wrap: wrap-reverse;
@@ -216,25 +228,30 @@ span{
 
     .content{
       flex:1 1 42rem;
+      background-color: white;
       align-items: center;
       text-align: center;
-      box-shadow: 0px 0px 43px 17px rgb(230, 206, 161);
       margin-right: 55px;  
       border: none;
       padding: 35px;
+      border-radius: 15px ;
+    }
+
+    .content >*{
+      color: black;
     }
 
 
 
     .content:hover{
-      background: rgb(58, 57, 56);
+      background: black;
       cursor: pointer;
       transform: 6s linear;
       border-radius: 70px;
     }
 
     .content:hover > *{
-      color: white;
+      color:white;
     }
 
       h3{
@@ -258,6 +275,7 @@ span{
           background:rgb(82, 80, 80);
           cursor: pointer;
           text-align: center;
+          border-radius: 100px;
           
         }
         
@@ -269,6 +287,55 @@ span{
           transform: rotate(360deg);
         }
         
+
+        /*services section starts*/
+
+        section  .heading{
+          text-align: center;
+          font-size: 3.5rem;
+          padding: 20px;
+          color: var(--black);
+        }
+
+        .box-container{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .box{
+          text-align: center;
+          padding:2rem;
+          background: var(--light-bg);
+          border-radius: .5rem;
+
+        }
+
+        section .heading span{
+          color: var(--red);
+        }
+
+        section .box-container .box img{
+          width: 10%;
+        }
+
+        section .box-container .box{
+          text-align: c;
+          padding:2rem;
+          background: var(--light-bg);
+          border-radius: .5rem;
+        }
+
+          section .box-container .box h3{
+            padding:1rem 0;
+            font-size: 2rem;
+            color:var(--black);
+          }
+    
+          section .box-container .box p{
+            font-size: 1.4rem;
+            color:var(--light-color);
+            line-height: 2rem;
+          }
     
 
 
@@ -323,9 +390,7 @@ span{
 
          .box .content {
           margin-left: 60px;
-         }
-        
- 
+         
         
 
         }
