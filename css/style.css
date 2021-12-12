@@ -200,8 +200,8 @@ h2::before{
 
 
 
-/* section start */
-  .box{
+/* section home start */
+  .home .box{
     display: flex;
     align-items: center;
     flex-wrap: wrap; /*small screen it will chrink*/
@@ -212,21 +212,21 @@ h2::before{
 
   }
 
-  .box .active{
+  .home .box .active{
     border-bottom: 1px solid white;
-  }
+    }
     .box :nth-child(2){
-      flex-wrap: wrap-reverse;
-     } 
+    flex-wrap: wrap-reverse;
+    } 
 
-    .image{
+  .image{
       flex:1 1 42rem;
     }
-      img{
-        width: 100%;
-      }
+  img{
+      width: 100%;
+    }
 
-    .content{
+  .box .content{
       flex:1 1 42rem;
       background-color: white;
       align-items: center;
@@ -237,36 +237,36 @@ h2::before{
       border-radius: 15px ;
     }
 
-    .content >*{
-      color: black;
+  .content >*{
+    color: black;
     }
 
 
 
-    .content:hover{
+  .content:hover{
       background: black;
       cursor: pointer;
       transform: 6s linear;
       border-radius: 70px;
     }
 
-    .content:hover > *{
+  .content:hover > *{
       color:white;
     }
 
-      h3{
+  h3{
         font-size: 3rem;
-        color:var(--black);
-      }
+        color:var(--light-color); 
+    }
 
-      p{
+  p{
         font-size: 1.5rem;
         color:var(--light-color);
         padding:1rem 0;
         line-height: 2;
       }
 
-      .btn{
+        .btn{
           margin-top: 1rem;
           display: inline-block;
           padding: 1rem 3rem;
@@ -296,47 +296,64 @@ h2::before{
           padding: 20px;
           color: var(--black);
         }
-
-        .box-container{
-         display: grid;
-         grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .box{
-          text-align: center;
-          padding:2rem;
-          background: var(--light-bg);
-          border-radius: .5rem;
-
-        }
-
+        
         section .heading span{
           color: var(--red);
         }
 
-        section .box-container .box img{
-          width: 10%;
+        section .box-container{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
         }
 
         section .box-container .box{
-          text-align: c;
-          padding:2rem;
+          text-align: center;
+          align-items: center;
+          padding: 15px;
+          border: 4px solid var(--white);
           background: var(--light-bg);
+          border-radius: .5rem;
+          cursor: pointer;
+        }
+
+        section .box-container .box:hover{
+          border: 4px solid var(--black);
+          background:var(--red);
           border-radius: .5rem;
         }
 
-          section .box-container .box h3{
-            padding:1rem 0;
-            font-size: 2rem;
-            color:var(--black);
-          }
+        section .box-container .box:hover >*{
+          color: black;
+        }
+
+        section .box-container .box img{
+          width: 15%;
+        }
+
+        section .box-container .box h3{
+           text-align: center;
+           padding-top: 3rem;
+           font-size: 2rem;
+           color:var(--black);
+        }
     
-          section .box-container .box p{
-            font-size: 1.4rem;
-            color:var(--light-color);
-            line-height: 2rem;
-          }
-    
+        section .box-container .box p{
+          font-size: 1.4rem;
+          color:var(--light-color);
+          line-height: 2rem;
+        }
+
+
+        section .work{
+            columns:3 25rem;
+            gap:2rem;
+        }
+            .work img{
+              margin-bottom: 2rem;
+              width: 100%;
+              border-radius: .5rem;
+             }
+
 
 
 
@@ -390,7 +407,13 @@ h2::before{
 
          .box .content {
           margin-left: 60px;
-         
+         }
+        
+         section .box-container{
+          display:block;
+         }
+        }
+        
         
 
-        }
+          
